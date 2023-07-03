@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://hk210cxv3s8v"]
+
+[ext_resource type="Script" path="res://Objects/Puzzle Elements/player_check.gd" id="1_iarjl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1capk"]
+radius = 11.0
+height = 28.0
+
+[node name="PlayerCheck" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_iarjl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_1capk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
