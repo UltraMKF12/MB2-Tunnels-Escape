@@ -1,14 +1,10 @@
 extends CharacterBody2D
 
-@onready var Player = $"../Player"
-
-const SPEED = 150.0
+var pixel_per_second: int = 50
+@onready var player: Node2D = $"../Player"
 
 func _physics_process(delta):
 	
-	var direction = Player.position - position
-	direction.normalize()
-	position += direction / SPEED
-	
-	
+	var direction = position.direction_to(player.position)
+	velocity = direction * pixel_per_second
 	move_and_slide()

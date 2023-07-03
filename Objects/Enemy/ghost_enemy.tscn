@@ -22,7 +22,7 @@ animations = [{
 radius = 4.0
 height = 14.0
 
-[node name="ghostEnemy" type="CharacterBody2D"]
+[node name="GhostEnemy" type="CharacterBody2D"]
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_4v5mo")
