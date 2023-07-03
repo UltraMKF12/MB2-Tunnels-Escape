@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://kqgm53xg56hw"]
+
+[ext_resource type="Texture2D" uid="uid://bxyr5577mpmk0" path="res://Scripts and Resources/tilemap_packed.png" id="1_pd37u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_542um"]
+atlas = ExtResource("1_pd37u")
+region = Rect2(16, 160, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nrw1g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_542um")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pc4bg"]
+radius = 5.0
+height = 14.0
+
+[node name="GhostCorpse" type="CharacterBody2D"]
+collision_layer = 16
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = -1.5708
+sprite_frames = SubResource("SpriteFrames_nrw1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_pc4bg")
