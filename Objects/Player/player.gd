@@ -27,4 +27,4 @@ func shoot_fireball():
 	new_fireball.position = global_position
 	new_fireball.look_at(get_global_mouse_position())
 	new_fireball.rotation_degrees -= 90 # This way the fireball head is the sprite bottom.
-	get_tree().root.add_child(new_fireball)
+	get_parent().add_child(new_fireball)

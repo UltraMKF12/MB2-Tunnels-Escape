@@ -21,8 +21,9 @@ animations = [{
 radius = 5.0
 height = 14.0
 
-[node name="GhostCorpse" type="CharacterBody2D"]
+[node name="GhostCorpse" type="StaticBody2D"]
 collision_layer = 16
+collision_mask = 0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 rotation = -1.5708
