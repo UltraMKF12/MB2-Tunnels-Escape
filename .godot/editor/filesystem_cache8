@@ -1,16 +1,20 @@
 2a60927148abd1d33b818b535e306557
-::res://::1688350538
-icon.svg::CompressedTexture2D::7052661746028187021::1688348262::1688348269::1::::<><>::
-::res://Objects/::1688350528
-::res://Objects/Fireball/::1688350915
-fireball.gd::GDScript::-1::1688350915::0::1::::<>CharacterBody2D<>::
-fireball.png::CompressedTexture2D::8045594666721178259::1688350526::1688350535::1::::<><>::
-fireball.tscn::PackedScene::448505452327259655::1688350796::0::1::::<><>::res://Objects/Fireball/fireball.gd<>uid://dmvl1eungcxe6
-::res://Objects/Player/::1688350915
-player.gd::GDScript::-1::1688351264::0::1::::<>CharacterBody2D<>::
-player.png::CompressedTexture2D::795808570225088976::1688348497::1688350539::1::::<><>::
-player.tscn::PackedScene::3195774263809772566::1688351299::0::1::::<><>::res://Objects/Player/player.gd<>uid://llq36vc7cnh5
-::res://Scripts and Resources/::1688350171
-GameManager.gd::GDScript::-1::1688350171::0::1::::<>Node<>::
-tilemap_packed.png::CompressedTexture2D::4051396542764276309::1688348476::1688348476::1::::<><>::
-::res://Sounds/::1688348417
+::res://::1688386466
+icon.svg::CompressedTexture2D::7052661746028187021::1688380720::1688380720::1::::<><>::
+README.md::TextFile::-1::1688380720::0::1::::<><>::
+::res://Objects/::1688381789
+::res://Objects/Fireball/::1688386384
+fireball.gd::GDScript::-1::1688386299::0::1::::<>CharacterBody2D<>::
+fireball.png::CompressedTexture2D::8045594666721178259::1688380720::1688380720::1::::<><>::
+fireball.tscn::PackedScene::448505452327259655::1688386384::0::1::::<><>::res://Objects/Fireball/fireball.gd<>uid://dmvl1eungcxe6
+::res://Objects/Player/::1688386384
+player.gd::GDScript::-1::1688380720::0::1::::<>CharacterBody2D<>::
+player.png::CompressedTexture2D::795808570225088976::1688380720::1688380720::1::::<><>::
+player.tscn::PackedScene::3195774263809772566::1688386384::0::1::::<><>::res://Objects/Player/player.gd<>uid://llq36vc7cnh5
+::res://Objects/Rooms/::1688386398
+main_world.tscn::PackedScene::981887433038543495::1688386398::0::1::::<><>::uid://d14je8y62i1gf<>uid://blsb62d0pp4go
+::res://Objects/Tilemap/::1688386384
+tile_map.tscn::PackedScene::9044594308437181065::1688386384::0::1::::<><>::uid://bxyr5577mpmk0
+::res://Scripts and Resources/::1688380720
+GameManager.gd::GDScript::-1::1688380720::0::1::::<>Node<>::
+tilemap_packed.png::CompressedTexture2D::4051396542764276309::1688380720::1688380720::1::::<><>::

@@ -1,6 +1,4 @@
-res://Objects/Player/player.tscn
-res://Objects/Player/player.gd
-res://Scripts and Resources/GameManager.gd
-res://Objects/Fireball/fireball.tscn
-res://Objects/Fireball/fireball.gd
 res://Objects/Rooms/main_world.tscn
+res://Objects/Player/player.tscn
+res://Objects/Fireball/fireball.tscn
+res://Objects/Tilemap/tile_map.tscn
