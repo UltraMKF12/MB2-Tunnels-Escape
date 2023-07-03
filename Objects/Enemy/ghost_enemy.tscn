@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1oew0l5x2aey"]
+
+[ext_resource type="Script" path="res://Objects/Enemy/ghost_enemy.gd" id="1_4v5mo"]
+[ext_resource type="Texture2D" uid="uid://bxyr5577mpmk0" path="res://Scripts and Resources/tilemap_packed.png" id="1_hcxf1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_542um"]
+atlas = ExtResource("1_hcxf1")
+region = Rect2(16, 160, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_viyma"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_542um")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_al0og"]
+radius = 4.0
+height = 14.0
+
+[node name="ghostEnemy" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_4v5mo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_viyma")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_al0og")

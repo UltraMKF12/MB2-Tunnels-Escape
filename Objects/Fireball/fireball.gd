@@ -12,6 +12,7 @@ func _process(delta):
 	# If it collides, it must be an enemy or a wall
 	if get_slide_collision_count() > 0:
 		queue_free()
+	
 
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
