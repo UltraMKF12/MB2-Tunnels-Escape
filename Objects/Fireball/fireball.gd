@@ -21,7 +21,8 @@ func _process(delta):
 		if not collision_object is TileMap:
 			if collision_object.has_method("die"):
 				collision_object.die()
-		
+			if collision_object.has_method("activate"):
+				collision_object.activate()
 		queue_free()
 
 
