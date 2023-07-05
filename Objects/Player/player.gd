@@ -19,7 +19,9 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("interact"):
 		activate_button()
-
+		
+	if get_slide_collision_count() > 0:
+		player_die()
 
 func get_movement_direction():
 	direction = Input.get_vector("left", "right", "up", "down")
@@ -46,3 +48,9 @@ func show_key():
 
 func hide_key():
 	e_text.hide()
+	
+func player_die():
+	var collision_hazard: Node2D = get_last_slide_collision().get_collider()
+	if collision_hazard is ghostEnemy:
+		queue_free()
+

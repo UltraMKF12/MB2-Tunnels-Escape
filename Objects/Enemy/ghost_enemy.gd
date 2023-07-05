@@ -8,10 +8,10 @@ var ghost_corpse: PackedScene = load("res://Objects/Enemy/ghost_corpse.tscn")
 
 
 func _physics_process(delta):
-	var direction = position.direction_to(player.position)
-	velocity = direction * pixel_per_second
-	move_and_slide()
-
+	if get_parent().has_node("Player"):
+		var direction = position.direction_to(player.position)
+		velocity = direction * pixel_per_second
+		move_and_slide()
 
 func die():
 	var corpse: Node2D = ghost_corpse.instantiate()
