@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://n8vsphbjkx00"]
+[gd_scene load_steps=9 format=3 uid="uid://n8vsphbjkx00"]
 
 [ext_resource type="Texture2D" uid="uid://bxyr5577mpmk0" path="res://Scripts and Resources/tilemap_packed.png" id="1_rjxu1"]
 [ext_resource type="PackedScene" uid="uid://blsb62d0pp4go" path="res://Objects/Player/player.tscn" id="1_rumoh"]
 [ext_resource type="PackedScene" uid="uid://c1oew0l5x2aey" path="res://Objects/Enemy/ghost_enemy.tscn" id="3_yab05"]
 [ext_resource type="PackedScene" uid="uid://c85eo60fm7tct" path="res://Objects/Puzzle Elements/button.tscn" id="4_ehyj0"]
 [ext_resource type="PackedScene" uid="uid://b7e6gtc4pxjtq" path="res://Objects/Obelisk/obelisk.tscn" id="5_g74en"]
+[ext_resource type="Script" path="res://Objects/Rooms/Camera2D.gd" id="6_fqu22"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2x8sp"]
 texture = ExtResource("1_rjxu1")
@@ -487,3 +488,7 @@ position = Vector2(-216, 288)
 
 [node name="Obelisk" parent="." instance=ExtResource("5_g74en")]
 position = Vector2(105, 3)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(17, 48)
+script = ExtResource("6_fqu22")
