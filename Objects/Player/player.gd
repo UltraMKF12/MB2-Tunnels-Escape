@@ -14,7 +14,7 @@ func _physics_process(delta):
 	velocity = direction * pixel_per_second
 	move_and_slide()
 	
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_just_pressed("shoot") and Global.mana >= 0:
 		shoot_fireball()
 	
 	if Input.is_action_just_pressed("interact"):
@@ -32,9 +32,11 @@ func shoot_fireball():
 	var new_fireball: Node2D = fireball.instantiate()
 	new_fireball.direction = global_position.direction_to(get_global_mouse_position())
 	new_fireball.position = global_position
+	get_parent().add_child(new_fireball)
 	new_fireball.look_at(get_global_mouse_position())
 	new_fireball.rotation_degrees -= 90 # This way the fireball head is the sprite bottom.
-	get_parent().add_child(new_fireball)
+	Global.mana -= 1
+	print(Global.mana)
 
 
 func activate_button():
