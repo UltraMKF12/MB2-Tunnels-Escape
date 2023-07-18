@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://n8vsphbjkx00"]
+[gd_scene load_steps=13 format=3 uid="uid://n8vsphbjkx00"]
 
 [ext_resource type="Texture2D" uid="uid://bh45gjxke13tu" path="res://Scripts and Resources/numbers.png" id="1_1qwwx"]
 [ext_resource type="Texture2D" uid="uid://bxyr5577mpmk0" path="res://Scripts and Resources/tilemap_packed.png" id="1_rjxu1"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c85eo60fm7tct" path="res://Objects/Puzzle Elements/button.tscn" id="4_ehyj0"]
 [ext_resource type="PackedScene" uid="uid://b7e6gtc4pxjtq" path="res://Objects/Obelisk/obelisk.tscn" id="5_g74en"]
 [ext_resource type="Script" path="res://Objects/Rooms/Camera2D.gd" id="6_fqu22"]
+[ext_resource type="PackedScene" uid="uid://b5r40cck80hrh" path="res://Objects/Box/box.tscn" id="8_73vk3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lumai"]
 texture = ExtResource("1_1qwwx")
@@ -448,7 +449,7 @@ texture = ExtResource("1_rjxu1")
 
 [sub_resource type="TileSet" id="TileSet_wtixt"]
 physics_layer_0/collision_layer = 8
-physics_layer_0/collision_mask = 7
+physics_layer_0/collision_mask = 39
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.14902, 0.247059, 0.223529, 1)
@@ -509,3 +510,6 @@ position = Vector2(105, 3)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(17, 48)
 script = ExtResource("6_fqu22")
+
+[node name="Box" parent="." instance=ExtResource("8_73vk3")]
+position = Vector2(8, 8)

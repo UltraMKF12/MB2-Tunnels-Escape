@@ -36,7 +36,7 @@ func shoot_fireball():
 	new_fireball.look_at(get_global_mouse_position())
 	new_fireball.rotation_degrees -= 90 # This way the fireball head is the sprite bottom.
 	Global.mana -= 1
-	print(Global.mana)
+#	print(Global.mana)
 
 
 func activate_button():
