@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name ghostEnemy
+class_name GhostEnemy
 
 var pixel_per_second: int = 50
 

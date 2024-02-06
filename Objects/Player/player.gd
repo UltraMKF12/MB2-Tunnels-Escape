@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 var pixel_per_second: int = 100
 var direction: Vector2
@@ -21,7 +22,7 @@ func _physics_process(delta):
 		activate_button()
 		
 	if get_slide_collision_count() > 0:
-		player_die()
+		player_collision()
 
 func get_movement_direction():
 	direction = Input.get_vector("left", "right", "up", "down")
@@ -51,8 +52,9 @@ func show_key():
 func hide_key():
 	e_text.hide()
 	
-func player_die():
-	var collision_hazard: Node2D = get_last_slide_collision().get_collider()
-	if collision_hazard is ghostEnemy:
+func player_collision():
+	var collision_object: Node2D = get_last_slide_collision().get_collider()
+	if collision_object is GhostEnemy:
 		queue_free()
-
+	elif collision_object is Box:
+		collision_object.linear_velocity = position.direction_to(collision_object.position) * 100

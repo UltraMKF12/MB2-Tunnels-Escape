@@ -6,9 +6,12 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dy84q"]
 size = Vector2(16, 16)
 
-[node name="Box" type="StaticBody2D"]
+[node name="Box" type="RigidBody2D"]
 collision_layer = 32
-collision_mask = 8
+collision_mask = 43
+mass = 2.0
+gravity_scale = 0.0
+lock_rotation = true
 script = ExtResource("1_sap8c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -19,19 +22,3 @@ region_rect = Rect2(48, 80, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_dy84q")
-
-[node name="RightRayCast" type="RayCast2D" parent="."]
-position = Vector2(9.53674e-07, 0)
-target_position = Vector2(9, 0)
-
-[node name="LeftRayCast" type="RayCast2D" parent="."]
-position = Vector2(9.53674e-07, 0)
-target_position = Vector2(-9, 0)
-
-[node name="UpperRayCast" type="RayCast2D" parent="."]
-position = Vector2(4.76837e-07, 0)
-target_position = Vector2(0, -9)
-
-[node name="BottomRayCast" type="RayCast2D" parent="."]
-position = Vector2(2.38419e-07, 0)
-target_position = Vector2(0, 9)
